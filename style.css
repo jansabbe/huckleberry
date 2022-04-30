@@ -11,9 +11,6 @@ body {
 }
 
 /* Add styles here! */
-:root {
-  --maxy: 648px;
-}
 
 body {
   background-color: hsl(0deg, 0%, 60%);
@@ -30,26 +27,24 @@ header {
 }
 
 .max-width-wrapper {
-  margin-inline: auto;
+  margin: 0 auto;
   width: fit-content;
 }
 
-.intro-chunk {
-  max-width: var(--maxy);
-  padding: 8px 240px 0 32px;
+.intro-chunk,
+.card {
+  max-width: 648px;
+  padding: 8px 32px;
 }
 
-@media (max-width: 648px) {
+@media (min-width: 648px) {
   .intro-chunk {
-    max-width: var(--maxy);
-    padding: 8px 32px;
+    padding-right: 240px;
   }
 }
 
 .card {
-  max-width: var(--maxy);
   background-color: hsl(0deg, 0%, 100%);
-  padding: 8px 32px;
   border-bottom: 8px solid hsl(0deg, 0%, 40%);
 }
 
